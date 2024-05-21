@@ -1,0 +1,11 @@
+npm create vite@latest
+ cd client
+  npm install
+  npm run dev
+
+//npm i react-router-dom
+
+<!-- How to Store JWT Token in Local Storage using Context API for Authentication -->
+//in react--"context" is a feature that allows to share data between components without explicitly passing the data through each level of the component tree.
+its a way to manage global state or share data between components that are not directly connected
+---->store->auth.jsx
