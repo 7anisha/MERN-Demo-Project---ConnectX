@@ -1,4 +1,4 @@
-.basic_client
-.basic_server
-.CORS
-.express_methods
+Basic_server
+CORS
+basic_client
+express_methods
