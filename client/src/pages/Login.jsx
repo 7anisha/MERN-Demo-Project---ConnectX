@@ -60,11 +60,11 @@ export const Login = () => {
     <>
       <section>
         <main>
-          <div className="section-registration">
+          <div className="section-registration login">
             <div className="container grid grid-two-cols">
               <div className="registration-image reg-img">
                 <img
-                  src="/images/login.png"
+                  src="/images/loginn.png"
                   alt="a nurse with a cute look"
                   width="400"
                   height="500"

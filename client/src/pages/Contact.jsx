@@ -72,7 +72,7 @@ export const Contact = () => {
     <>
       <section className="section-contact">
         <div className="contact-content container">
-          <h1 className="main-heading">Contact Us</h1>
+          
         </div>
         {/* Contact page main */}
         <div className="container grid grid-two-cols">
@@ -82,6 +82,8 @@ export const Contact = () => {
 
           {/* Contact form content actual */}
           <section className="section-form">
+          <h1 className="main-heading">Contact Us</h1>
+          <br></br>
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="username">Username</label>

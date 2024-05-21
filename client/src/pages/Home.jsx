@@ -28,7 +28,7 @@ export const Home = () => {
             {/* hero images  */}
             <div className="hero-image">
               <img
-                src="/images/home.png"
+                src="/images/Homee.png"
                 alt="coding together"
                 width="400"
                 height="500"
@@ -43,6 +43,7 @@ export const Home = () => {
 
       {/* 3rd section  */}
       <section className="section-hero">
+        <br></br>
         <div className="container grid grid-two-cols">
           {/* hero images  */}
           <div className="hero-image">

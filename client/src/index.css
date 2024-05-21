@@ -9,14 +9,14 @@
 
 /* CSS Custom Properties, commonly known as CSS Variables. */
 :root {                   
-  --bg-color: #f4f3ff;
-  --btn-color: #646cff;
+  --bg-color: #ebd2ae;
+  --btn-color: #ffc670;
   --dark-color: #242424;
   --helper-color: #99b9ff;
 }
 
 html {
-  font-size: 55%;
+  font-size: 56%;
 }
 
 /*? base style */
@@ -50,7 +50,7 @@ textarea {
 
 a {
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1;
   letter-spacing: 0.1rem;
   color: var(--btn-color);
   text-decoration: inherit;
@@ -64,23 +64,25 @@ li {
 /*? layout Rule  */
 
 .container {
-  max-width: 140rem;
-  padding: 4rem 2.4rem;
+  max-width: 134rem;
+  padding: 3.9rem 2.4rem;
   margin: 0 auto;
 }
 
 .grid {
   display: grid;
-  gap: 6.4rem;
+  gap: 2.4rem;
 }
 
 .grid-two-cols {
   grid-template-columns: repeat(2, 1fr);
+  /* margin-top: 6rem; */
 }
 
 .grid-four-cols {
   grid-template-columns: repeat(4, 0.5fr);
-  padding: 3rem;
+  padding: 1.1rem;
+  background-color: #ee9817;
 }
 
 /*? Module Rules / Reusable */
@@ -120,7 +122,7 @@ a:hover {
   color:antiquewhite;
 }
 a{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 
@@ -148,7 +150,7 @@ a{
     display: flex;
     justify-content: center;
     & img {
-      width: 70%;
+      width: 88%;
       height: auto;
     }
   }
@@ -351,11 +353,11 @@ a{
 ** -------------------------  */
 
 .section-registration {
-  padding: 0 3.2rem;
+  padding: 1.5rem 7.2rem;
 
   & .container {
     /* background-color: #fff; */
-    padding-top: 3.2rem;
+    padding-top: .2rem;
     align-items: center;
 
     & img {
@@ -385,6 +387,7 @@ a{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  
 }
 
 .adminContainer {
@@ -482,6 +485,7 @@ a{
       & .reg-img img {
         width: 50%;
         height: auto;
+        padding:1.5rem;
       }
     }
 
@@ -492,6 +496,9 @@ a{
       }
     }
   }
+}
+.section-registration.login {
+  padding: 4.9rem; /* Adjust the value as needed */
 }
 
 
