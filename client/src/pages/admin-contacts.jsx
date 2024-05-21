@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth"
 import {Link} from "react-router-dom";
+import { API } from '../apiconfig';
 
 export const AdminContacts = () => {
     const [contacts, setContacts] = useState([]);
@@ -9,7 +10,7 @@ export const AdminContacts = () => {
 
     const getAllContacts = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/admin/contact", {
+            const response = await fetch(`${API}/api/admin/contact`, {
                 method: "GET",
                 headers: {
                     Authorization: authorization
@@ -29,7 +30,7 @@ export const AdminContacts = () => {
     const deleteContact = async (id)=>{
 
         try{
-        const response = await fetch(`http://localhost:5000/api/admin/contact/delete/${id}`, {
+        const response = await fetch(`${API}/api/admin/contact/delete/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: authorization,

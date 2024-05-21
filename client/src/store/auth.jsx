@@ -1,12 +1,14 @@
 import { createContext, useContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
-
+import { API } from '../apiconfig';
 // eslint-disable-next-line react/prop-types
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState("");
   const [services, setService] = useState([]);
   const authorization =`Bearer ${token}`;
+
+  // const API = import.meta.env.API;
 
 
 
@@ -32,7 +34,7 @@ export const AuthProvider = ({ children }) => {
   // function to check the user Authentication or not
   const userAuthentication = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user", {
+      const response = await fetch(`${API}/user`, {
         method: "GET",
         headers: {
           Authorization: authorization,
@@ -57,7 +59,7 @@ export const AuthProvider = ({ children }) => {
   //to fetch the service data from backend
   const getServiceData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/data/service", {
+      const response = await fetch(`${API}/api/data/service`, {
         method: "GET",
       });
 

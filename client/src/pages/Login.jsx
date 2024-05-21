@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/auth';
 import { toast } from 'react-toastify';
+import { API } from '../apiconfig';
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -10,7 +11,7 @@ export const Login = () => {
   });
 
   const navigate = useNavigate();
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS} = useAuth();
 
   const handleInput = (e) => {
     let name = e.target.name;
@@ -25,7 +26,7 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch(`${API}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

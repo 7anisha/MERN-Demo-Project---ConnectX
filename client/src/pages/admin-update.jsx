@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+import { API } from '../apiconfig';
 
 const Data = {
     username: "",
@@ -15,13 +16,13 @@ export const AdminUpdate = () => {
     );
 
     const params = useParams()
-    const { authorization } = useAuth()
+    const { authorization} = useAuth()
 
 
     const getsingleUser = async () => {
 
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/user/${params.id}`, {
+            const response = await fetch(`${API}/api/admin/user/${params.id}`, {
                 method: "GET",
                 headers: {
                     Authorization: authorization,
@@ -58,7 +59,7 @@ export const AdminUpdate = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); //prevent from automatic page reload
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/user/update/${params.id}`, {
+            const response = await fetch(`${API}/api/admin/user/update/${params.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type":"application/json",

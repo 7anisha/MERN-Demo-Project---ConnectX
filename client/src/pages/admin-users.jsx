@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth"
 import {Link} from "react-router-dom";
-
+import { API } from '../apiconfig';
 export const AdminUsers = () => {
     const [users, setUsers] = useState([]);
 
-    const { authorization } = useAuth();  //fetch kr rhe h auth.jsx se
+    const { authorization} = useAuth();  //fetch kr rhe h auth.jsx se
 
     const getAllUser = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/admin/user", {
+            const response = await fetch(`${API}/api/admin/user`, {
                 method: "GET",
                 headers: {
                     Authorization: authorization
@@ -29,7 +29,7 @@ export const AdminUsers = () => {
     const deleteUser = async (id)=>{
 
         try{
-        const response = await fetch(`http://localhost:5000/api/admin/user/delete/${id}`, {
+        const response = await fetch(`${API}/api/admin/user/delete/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: authorization,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
-
+import { API } from '../apiconfig';
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -32,7 +32,7 @@ export const Register = () => {
     console.log(user);
 
     try {
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch(`${API}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
