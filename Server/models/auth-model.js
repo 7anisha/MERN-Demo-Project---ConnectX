@@ -67,9 +67,9 @@ userSchema.methods.generateToken = async function () {
         isAdmin: this.isAdmin,
       },
       process.env.JWT_SECRET_KEY,
-      {
-        expiresIn: "30d",
-      }
+      // {
+      //   expiresIn: "30d",
+      // }
     );
   } catch (error) {
     console.error("Token Error: ", error);
